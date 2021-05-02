@@ -1,8 +1,8 @@
-import { Command } from 'commander/esm.mjs';
+import commander from 'commander';
 import makeCompareFiles from './src/main.js';
 
-const program = new Command();
-export default program
+const program = commander.createCommand();
+const genDiff = program
   .description('Compares two configuration files and shows a difference.')
   .version('0.1.0')
   .option('-f, --format [type]', 'output format')
@@ -11,4 +11,7 @@ export default program
   .action((filepath1, filepath2) => {
     console.log(makeCompareFiles(filepath1, filepath2, program.format));
   });
+
 program.parse(process.argv);
+
+export default genDiff;
