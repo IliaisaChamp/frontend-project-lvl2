@@ -5,9 +5,10 @@ import parse from './src/parsers.js';
 import format from './src/formatters/index.js';
 
 const makeDiff = (obj1, obj2) => {
-  const keys = _.union(_.keys(obj1), _.keys(obj2)).sort();
+  const keys = _.union(_.keys(obj1), _.keys(obj2));
+  const sortedKeys = [...keys];
 
-  return keys.map((key) => {
+  return sortedKeys.map((key) => {
     if (!_.has(obj1, key)) {
       return { name: key, status: 'added', value: obj2[key] };
     }
