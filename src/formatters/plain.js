@@ -28,7 +28,7 @@ export default (diff) => {
         case 'unmodified':
           return [];
         case 'modified':
-          return `Property '${newPath.slice(1)}' was updated from ${stringify(oldValue)} to ${stringify(newValue)}`;
+          return `Property '${newPath.slice(1)}' was updated. From ${stringify(oldValue)} to ${stringify(newValue)}`;
         default:
           throw new Error(`Unknown status ${status}`);
       }
