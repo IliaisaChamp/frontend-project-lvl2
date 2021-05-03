@@ -28,8 +28,8 @@ const makeDiff = (obj1, obj2) => {
 
 export default (filepath1, filepath2, outputFormat) => {
   const currentDirectory = process.cwd();
-  const fullPath1 = path.resolve(currentDirectory, filepath1);
-  const fullPath2 = path.resolve(currentDirectory, filepath2);
+  const fullPath1 = path.resolve(currentDirectory, '__fixtures__', filepath1);
+  const fullPath2 = path.resolve(currentDirectory, '__fixtures__', filepath2);
 
   const getFileFormat = (filepath) => path.extname(filepath).slice(1);
   const fileFormat1 = getFileFormat(fullPath1);
