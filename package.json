@@ -5,7 +5,7 @@
   "description": "[![Actions Status](https://github.com/IliaisaChamp/frontend-project-lvl2/workflows/hexlet-check/badge.svg)](https://github.com/IliaisaChamp/frontend-project-lvl2/actions)",
   "main": "index.js",
   "scripts": {
-    "test": "node --experimental-vm-modules node_modules/jest/bin/jest"
+    "test": "npx jest --bail"
   },
   "bin": {
     "gendiff": "./bin/gendiff.js"
@@ -19,6 +19,10 @@
     "jest",
     "js"
   ],
+  "jest": {
+    "testEnvironment": "node",
+    "transform": {}
+  },
   "author": "Ilia V.",
   "license": "ISC",
   "bugs": {
@@ -26,6 +30,7 @@
   },
   "homepage": "https://github.com/IliaisaChamp/frontend-project-lvl2#readme",
   "devDependencies": {
+    "debug": "^4.3.1",
     "eslint": "^7.22.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.22.1",

@@ -6,9 +6,11 @@ publish:
 
 lint:
 	npx eslint .
-
-jest:
-	npx --experimental-vm-modules jest
+	
+test:
+	npm test
 
 tests:
 	npm test -- --coverage --coverageProvider=v8	
+
+.PHONY: test
