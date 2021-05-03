@@ -1,8 +1,8 @@
 import _ from 'lodash';
 import fs from 'fs';
 import path from 'path';
-import parse from './parsers.js';
-import format from './formatters/index.js';
+import parse from './src/parsers.js';
+import format from './src/formatters/index.js';
 
 const makeDiff = (obj1, obj2) => {
   const keys = _.union(_.keys(obj1), _.keys(obj2)).sort();

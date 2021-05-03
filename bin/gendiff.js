@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import commander from 'commander';
-import makeCompareFiles from '../src/index.js';
+import makeCompareFiles from '../index.js';
 
 const program = commander.createCommand();
 const genDiff = program
